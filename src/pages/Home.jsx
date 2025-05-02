@@ -3,7 +3,7 @@ import LanguageSwitcher from '../components/widgets/LanguageSwitcher';
 
 function Home() {
   const { t } = useTranslation();
-  const unusedVar = 42;
+  const unusedVar = 43;
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
       <LanguageSwitcher />
