@@ -1,11 +1,12 @@
-import { useNavigate, useParams } from "react-router";
-import i18n from "i18next";
+import { useNavigate, useParams } from 'react-router';
+import i18n from 'i18next';
+import Button from '../common/Buttons/Buttons';
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ className }) => {
   const navigate = useNavigate();
   const { lng } = useParams();
 
-  const changeLanguage = (newLng) => {
+  const changeLanguage = newLng => {
     if (lng !== newLng) {
       i18n.changeLanguage(newLng);
       navigate(`/${newLng}`);
@@ -13,13 +14,9 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex gap-3">
-      <button className="cursor-pointer" onClick={() => changeLanguage("en")}>
-        English
-      </button>
-      <button className="cursor-pointer" onClick={() => changeLanguage("uk")}>
-        Українська
-      </button>
+    <div className={`flex gap-3 ${className}`}>
+      <Button onClick={() => changeLanguage('en')}>English</Button>
+      <Button onClick={() => changeLanguage('uk')}>Ukrainian</Button>
     </div>
   );
 };
