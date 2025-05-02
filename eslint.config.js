@@ -48,7 +48,7 @@ export default [
       ...reactHooks.configs.recommended.rules, // Рекомендовані правила React Hooks
       ...prettierConfig.rules, // Відключення конфліктів з Prettier
 
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }], // Заборона невикористаних змінних
+      'no-unused-vars': ['error'], // Заборона невикористаних змінних
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
