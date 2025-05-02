@@ -1,0 +1,10 @@
+dist/
+build/
+coverage/
+node_modules
+.prettierignore
+.eslintignore
+*.log
+package-lock.json
+*.min.*
+.env
